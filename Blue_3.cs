@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_8
 {
-    internal class Blue_3 : Blue
+    public class Blue_3 : Blue
     {
         private (char, double)[] _output; //  кортеж из символа и вещественного числа
         public (char, double)[] Output => _output;

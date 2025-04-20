@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lab_8
 {
-    internal class Blue_1 : Blue
+    public class Blue_1 : Blue
     {
         private string[] _output;
         public string[] Output=> _output;
@@ -45,13 +45,13 @@ namespace Lab_8
                 {
                     result[count] = time;
                     count++;
-                    time = w;
+                    time = w;//начинаем новую строку с текущего слова
                 }
                 
             }
             if(!string.IsNullOrEmpty(time))
             {
-                result[count++] = time;
+                result[count++] = time; //добавляем последнюю строку, если она не пустая
             }
             _output = result;
         }

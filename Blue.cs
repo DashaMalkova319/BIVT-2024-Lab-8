@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_8
 {
-    abstract class Blue
+    public abstract class Blue
     {
         private string _input;
         public string Input => _input;
