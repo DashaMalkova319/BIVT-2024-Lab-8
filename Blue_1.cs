@@ -13,13 +13,13 @@ namespace Lab_8
         public string[] Output=> _output;
         public Blue_1(string input) : base(input) 
         {
-            _output = new string[0];
+            _output = null;
         }
         public override void Review()
         {
             if (string.IsNullOrEmpty(Input))
             {
-                _output = new string[0];
+                _output = null;
                 return;
             }
             string[] word = Input.Split(' '); //разделяю слова в тексте по пробелам
@@ -49,11 +49,13 @@ namespace Lab_8
                 }
                 
             }
-            if(!string.IsNullOrEmpty(time))
+            if(time.Length > 0)
             {
                 result[count++] = time; //добавляем последнюю строку, если она не пустая
             }
-            _output = result;
+            _output = new string[count];
+            Array.Copy(result, _output, count);
+            
         }
         public override string ToString()
         {

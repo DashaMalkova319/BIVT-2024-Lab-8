@@ -13,14 +13,14 @@ namespace Lab_8
         public string Output => _output;
         public Blue_2 (string input, string del) : base (input)
         {
-            _output = string.Empty;
+            _output = null;
             _del = del;
         }
         public override void Review()
         {
             if (string.IsNullOrEmpty(_del) || string.IsNullOrEmpty(Input))
             {
-                _output = string.Empty;
+                _output = null;
                 return;
             }
             string[]word = Input.Split(' ');
@@ -66,7 +66,7 @@ namespace Lab_8
         }
         public override string ToString()
         {
-            if(string.IsNullOrEmpty(_output)) return string.Empty;
+            if(string.IsNullOrEmpty(_output)) return null;
             return _output;
         }
     }
